@@ -1,1 +1,3 @@
-# frontend-nanodegree-feedreader
+**如何使用**
+
+在浏览器中打开index.html，等待几秒后你将在页面最下方看到测试结果。
