@@ -30,6 +30,7 @@ $(function() {
          * in the allFeeds object and ensures it has a URL defined
          * and that the URL is not empty.
          */
+         //测试遍历 allFeeds 对象里面的所有的源来保证有链接字段而且链接不是空的
         it('allFeeds has a URL defined and the URL is not empty', function() {
             allFeeds.forEach(function(feed){
                 expect(feed.url).toBeDefined();
@@ -41,6 +42,7 @@ $(function() {
          * in the allFeeds object and ensures it has a name defined
          * and that the name is not empty.
          */
+         //测试遍历 allFeeds 对象里面的所有的源来保证有名字字段而且不是空的
         it('allFeeds has a name defined and the name is not empty', function() {
             allFeeds.forEach(function(feed){
                 expect(feed.name).toBeDefined();
@@ -56,6 +58,7 @@ $(function() {
          * the CSS to determine how we're performing the
          * hiding/showing of the menu element.
          */
+         //测试用例保证菜单元素默认是隐藏的
         it('should be hidden by default', function() {
             expect($('body').hasClass('menu-hidden')).toBe(true);
         });
@@ -65,6 +68,7 @@ $(function() {
           * should have two expectations: does the menu display when
           * clicked and does it hide when clicked again.
           */
+          //测试用例保证当菜单图标被点击的时候菜单会切换可见状态
         it('changes visibility when menu icon is clicked', function() {
             $('.menu-icon-link').trigger('click');
             expect($('body').hasClass('menu-hidden')).toBe(false);
@@ -82,6 +86,7 @@ $(function() {
          * Remember, loadFeed() is asynchronous so this test will require
          * the use of Jasmine's beforeEach and asynchronous done() function.
          */
+         //测试保证 loadFeed 函数被调用而且工作正常，即在 .feed 容器元素里面至少有一个 .entry 的元素
         beforeEach(function( done ) {
             loadFeed(0, done);
         });
@@ -96,6 +101,7 @@ $(function() {
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
          */
+         //测试保证当用 loadFeed 函数加载一个新源的时候内容会真的改变
         var $feedContentBefore;
          var $feedContentAfter;
 
